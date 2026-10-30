@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: white;
+}
+
+header {
+    background-color: #191919;
+    padding: 20px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 28px;
+}
+
+.navbar h1 span {
+    color: #e50914;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e50914;
+}
+
+.hero {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    background: linear-gradient(90deg, #111111, #451014);
+}
+
+.hero-conteudo {
+    max-width: 550px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #cccccc;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #e50914;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #b20710;
+}
+
+.secao {
+    padding: 50px 8%;
+}
+
+.secao h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.pesquisa svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    margin-right: 10px;
+}
+
+.pesquisa input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+.categorias {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.categoria {
+    background-color: #292929;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.categoria:hover,
+.categoria.ativa {
+    background-color: #e50914;
+}
+
+.lista-filmes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.filme {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.filme:hover {
+    transform: translateY(-5px);
+}
+
+.filme img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.filme-info {
+    padding: 15px;
+}
+
+.filme-info h3 {
+    margin-bottom: 8px;
+}
+
+.filme-info p {
+    color: #bbbbbb;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.nota {
+    color: #ffd700 !important;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.acoes button {
+    flex: 1;
+    padding: 9px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e50914;
+    color: white;
+    font-size: 12px;
+}
+
+.acoes button:hover {
+    background-color: #b20710;
+}
+
+.mensagem-vazia {
+    color: #aaaaaa;
+    grid-column: 1 / -1;
+}
+
+.video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 800px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+canvas {
+    width: 100%;
+    max-width: 700px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #191919;
+    text-align: center;
+    padding: 25px;
+    color: #aaaaaa;
+}
+
+@media (max-width: 850px) {
+    .lista-filmes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .secao {
+        padding: 35px 5%;
+    }
+}
+
+@media (max-width: 350px) {
+    .lista-filmes {
+        grid-template-columns: 1fr;
+    }
+}

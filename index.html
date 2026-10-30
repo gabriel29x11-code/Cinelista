@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineLista: encontre filmes, descubra histórias e organize seus favoritos.">
+    <title>CineLista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>Cine<span>Lista</span></h1>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#favoritos">Favoritos</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <h2>Seu próximo filme favorito está aqui.</h2>
+                <p>Explore filmes, descubra histórias e monte sua própria lista.</p>
+                <a href="#filmes" class="botao">Explorar filmes</a>
+            </div>
+        </section>
+
+        <section class="secao" id="filmes">
+            <h2>Catálogo de filmes</h2>
+
+            <div class="pesquisa">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m16 16 5 5"></path>
+                </svg>
+                <input type="text" id="pesquisa" placeholder="Pesquisar filme...">
+            </div>
+
+            <div class="categorias">
+                <button class="categoria ativa" data-genero="todos">Todos</button>
+                <button class="categoria" data-genero="ação">Ação</button>
+                <button class="categoria" data-genero="terror">Terror</button>
+                <button class="categoria" data-genero="romance">Romance</button>
+                <button class="categoria" data-genero="suspense">Suspense</button>
+            </div>
+
+            <div class="lista-filmes" id="lista-filmes"></div>
+        </section>
+
+        <section class="secao" id="favoritos">
+            <h2>Meus favoritos</h2>
+            <div class="lista-filmes" id="lista-favoritos"></div>
+        </section>
+
+
+        <section class="secao" id="avaliacoes">
+            <h2>Avaliações dos filmes</h2>
+            <canvas id="grafico" width="700" height="300"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 CineLista - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
